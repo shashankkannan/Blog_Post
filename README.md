@@ -100,3 +100,85 @@ This project uses MongoDB as a database, Express.js for server-side logic, and N
   **- Login.js:** The component responsible for user login. It includes a form with fields for username and password, enabling users to access their accounts securely.
 
   **- Register.js:** Facilitates user registration. Users can sign up by providing a username, email, and password. The component includes form validation to ensure accurate registration.
+
+
+
+
+## Getting Started
+
+Follow these steps to set up the project on VS code in your local machine:
+
+### 1. Clone the Repository
+
+```bash
+git clone <[repository-url](https://github.com/shashankkannan/Blog_Post.git)>
+cd Blog_Post
+```
+
+### 2. Install Dependencies
+
+Make sure you have Node.js and npm installed on your machine. Navigate to the project folder and run:
+
+```bash
+npm install
+```
+
+### 3. Set Up MongoDB
+
+Make sure you have MongoDB installed and running on your machine.
+
+#### Sample Schema
+
+Below is the schema for the BlogPost, Comments, and Users collections in MongoDB:
+
+**BlogPost:**
+```json
+{
+  "title": "Physics",
+  "content": "This is a blog post about Physics.",
+  "author": "Michael",
+  "tags": ["A"],
+  "comments": ["Dwight", "Jim", "Pam", "Angela", "Stanley"],
+  "creationDate": "2023-10-24T01:00:20.403Z",
+  "__v": 0
+}
+```
+
+**Comments:**
+```json
+{
+  "_id": "653717247b09495ebb2d9739",
+  "commenterName": "Dwight",
+  "commentText": "I disagree.",
+  "creationDate": "2023-10-24T01:00:20.458Z",
+  "blogPost": "Physics",
+  "userid": "Michael",
+  "__v": 0
+}
+```
+
+**Users:**
+```json
+{
+  "_id": "653717247b09495ebb2d9722",
+  "username": "Michael",
+  "email": "michael@example.com",
+  "password": "cGFzc3dvcmQx",
+  "comments": ["Jim", "Pam"],
+  "blogPost": ["Physics"],
+  "registrationDate": "2023-10-24T01:00:20.347Z",
+  "__v": 2
+}
+```
+
+### 4. Run the Application
+
+Once you've set up MongoDB, run the Express.js application:
+
+```bash
+npm start
+```
+
+Open your browser and navigate to `http://localhost:3000` to explore the Express.js BlogPost Web App.
+
+
